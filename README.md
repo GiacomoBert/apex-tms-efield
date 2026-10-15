@@ -42,12 +42,26 @@ for both is in **[`INSTALL.md`](INSTALL.md)**.
 
 ## Quick start
 
+**First, install / check the dependencies.** Follow the step-by-step setup for your
+platform in **[`INSTALL.md`](INSTALL.md)**:
+
+- **macOS** → §1 "Components" (FreeSurfer, SimNIBS 4.1, dcm2niix, python-tk).
+- **Windows** → §1b "Running on Windows (via WSL2 / Ubuntu)".
+
+Then confirm everything is found (INSTALL.md §0):
+
+```bash
+simnibs_python check_setup.py        # lists anything still missing
+```
+
+**To open the GUI →**
+
 ```bash
 # macOS
 ./run_pipeline.command        # or:  "$(brew --prefix)/bin/python3" pipeline_gui.py
 
-# Linux / Windows-WSL2
-./run_pipeline.sh             # needs: sudo apt install python3-tk
+# Windows (WSL2 / Ubuntu) or Linux
+./run_pipeline.sh             # if the window doesn't appear: sudo apt install python3-tk
 ```
 
 Tool locations (SimNIBS, FreeSurfer, the coil, …) are auto-detected on both macOS
