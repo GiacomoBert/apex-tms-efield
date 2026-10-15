@@ -1,5 +1,8 @@
 # APEX-MT TMS E-field dosing pipeline
 
+<img width="1906" height="1005" alt="image" src="https://github.com/user-attachments/assets/d827b9d3-1fb8-4799-9168-1d1d1378e6da" />
+
+
 A desktop pipeline that turns a structural MRI and a Brainsight coil-positioning
 export into an individualized TMS dose using the **APEX MT** method (Caulfield et
 al., 2021). 
