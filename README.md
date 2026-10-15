@@ -2,16 +2,12 @@
 
 A desktop pipeline that turns a structural MRI and a Brainsight coil-positioning
 export into an individualized TMS dose using the **APEX MT** method (Caulfield et
-al., 2021). It runs SimNIBS electric-field simulations from code — no manual GUI
-steps — so a research assistant can operate it end to end. It is a general tool for
-APEX-adjusted TMS dosing, not tied to any one study.
+al., 2021). 
 
 Given a subject's resting motor threshold (rMT) measured over M1, APEX computes the
 machine output (% of maximum stimulator output, %MSO) that reproduces the same
 cortical electric field at a non-motor target (e.g. IPL, DLPFC). The field is
-estimated for M1 and for each target at the same stimulation intensity; because the
-field scales linearly with the coil current rate (dI/dt), the APEX ratio is
-independent of the exact dI/dt calibration.
+estimated for M1 and for each target at the same stimulation intensity.
 
 ## What it does
 
@@ -70,12 +66,6 @@ simnibs_python apex_pipeline.py example_config.json             # run
 | Helpers | `locate.py`, `didt_ref.py`, `visualize.py`, `check_setup.py` |
 | Configs / docs / tests | `*config*.json`, `INSTALL.md`, `SPEC.md`, `test_*.py` |
 
-## Data & privacy
-
-This repository contains **code only**. No MRI images, head models, or Brainsight
-exports (which carry subject coordinates) are included; `.gitignore` is set up to
-keep such files out. Do not commit subject data.
-
 ## Method reference
 
 Caulfield KA, et al. *Four electric field modeling methods of Dosing Prefrontal
@@ -86,8 +76,7 @@ method (`apex.py` is the dosing math; `simulate.py`/`extract.py` the E-field sid
 ## Credits
 
 This tool builds on the original SimNIBS E-field / CHARM dosing pipeline developed by
-**Brice Passera** (MATLAB scripts plus a tkinter command-generator with an APEX
-calculator, where the field simulation was run by hand). It is a cross-platform
+**Brice Passera** . It is a cross-platform
 Python reimplementation that fully automates that workflow — DICOM → recon-all →
 CHARM → E-field simulation → APEX dose, with a GUI — by **Giacomo Bertazzoli**.
 Please credit both when using or extending this work.
