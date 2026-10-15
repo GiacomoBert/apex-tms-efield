@@ -1,0 +1,28 @@
+{
+  "subject_id": "SUBJECT",
+  "work_dir": "/CHANGE/ME/pipeline_work/SUBJECT",
+
+  "dicom_input": "/CHANGE/ME/scan.tbz",
+  "use_t2": true,
+  "t1_hint": null,
+  "t2_hint": null,
+  "openmp": 4,
+
+  "brainsight_file": "/CHANGE/ME/SUBJECT_brainsight.txt",
+  "coil_file": "/Applications/SimNIBS-4.1/simnibs/resources/coil_models/Drakaki_BrainStim_2022/MagVenture_Cool-B65.ccd",
+  "out_dir": "/CHANGE/ME/dose_output",
+  "m1_target": "M1 (anatomical)",
+  "targets": {"IPL": "IPL", "DLPFC": "DLPFC"},
+  "didt_A_per_us": 87.0,
+  "rmt_pct": 60,
+  "roi_mode": "whole_gm",
+  "radius_mm": 10.0,
+  "pct": 99.9,
+  "percents": [120, 135],
+  "custom_pct": 105,
+
+  "open_meshes": true,
+  "show_spheres": true,
+  "open_csv": true,
+  "skip_dose": false
+}

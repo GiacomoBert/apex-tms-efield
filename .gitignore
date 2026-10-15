@@ -1,0 +1,46 @@
+# ---- Patient / subject data — NEVER commit (this is a public repo) ----
+# MRI images, meshes, head models, neuronav exports, archives
+*.nii
+*.nii.gz
+*.mgz
+*.mgh
+*.dcm
+*.ima
+*.msh
+*.tbz
+*.tbz2
+*.tgz
+*.tar
+*.tar.*
+*.zip
+# Brainsight target exports (contain subject coordinates)
+*brainsight*.txt
+*_targets*.txt
+# Pipeline working / output folders
+m2m_*/
+freesurfer/
+simnibs/
+dicom_work/
+nifti/
+qc_spheres/
+apex_*/
+APEX_local/
+*.log
+apex_results.csv
+# Runtime config written to the user's home (safety: keep it out)
+_pipeline_dose_config.json
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# ---- OS / editor cruft ----
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
